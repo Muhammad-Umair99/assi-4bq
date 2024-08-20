@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar {
+            background-color: #f4b400; /* Yellow */
+            color: white;
+            padding: 15px;
+            width: 200px;
+            float: left;
+            height: calc(100vh - 50px); /* Full height minus header */
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            background-color: #2196F3; /* Blue */
+            color: white;
+            padding: 15px;
+            margin-left: 220px; /* Sidebar width + padding */
+            flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+        }
+
+        .box {
+            background-color: #FFC107; /* Amber */
+            color: black;
+            padding: 20px;
+            margin: 10px;
+            flex: 1; /* Grow to fill available space */
+            min-width: 200px; /* Minimum width of each box */
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        .footer {
+            background-color: #FF5722; /* Orange */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header Section</h1>
+    </header>
+
+    <div class="sidebar">
+        <h2>Sidebar Section</h2>
+    </div>
+
+    <div class="main-content">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Content for box 1.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Content for box 2.</p>
+        </div>
+        <div class="box">
+            <h3>Box 3</h3>
+            <p>Content for box 3.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Footer Section</p>
+    </footer>
+</body>
+</html>
